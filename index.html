@@ -1,184 +1,165 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hediea Store - Links</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hediea Store</title>
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-        body {
-            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #0f0c29 0%, #302b63 45%, #24243e 100%);
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            padding: 20px;
-        }
+body{
+    font-family: "Segoe UI", Tahoma;
+    background: radial-gradient(circle at top, #2b2a5a, #0f0c29);
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+}
 
-        .card {
-            width: 100%;
-            max-width: 420px;
-            padding: 45px 30px;
-            text-align: center;
-            border-radius: 32px;
+/* CARD */
+.card{
+    width:92%;
+    max-width:420px;
+    padding:40px 25px;
+    text-align:center;
+    border-radius:28px;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(18px);
+    border:1px solid rgba(255,255,255,0.15);
+    box-shadow:0 25px 60px rgba(0,0,0,0.5);
+    animation: fadeIn 0.8s ease;
+}
 
-            background: rgba(255, 255, 255, 0.08);
-            backdrop-filter: blur(18px);
-            -webkit-backdrop-filter: blur(18px);
+/* LOGO */
+.logo{
+    width:130px;
+    height:130px;
+    margin:auto;
+    border-radius:50%;
+    overflow:hidden;
+    border:4px solid #e1306c;
+    box-shadow:0 0 25px rgba(225,48,108,0.3);
+}
 
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.45);
-        }
+.logo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
 
-        .logo-container {
-            width: 135px;
-            height: 135px;
-            margin: 0 auto 22px;
-            border-radius: 50%;
-            overflow: hidden;
+/* TEXT */
+h1{
+    margin-top:15px;
+    font-size:28px;
+}
 
-            display: flex;
-            justify-content: center;
-            align-items: center;
+.tagline{
+    font-size:14px;
+    color:#ddd;
+    margin:10px 0 25px;
+}
 
-            background: #ffffff;
-            border: 4px solid #e1306c;
-            box-shadow: 0 10px 25px rgba(225, 48, 108, 0.25);
-        }
+/* LINKS */
+.links{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
 
-        .logo-container img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
+.btn{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:15px 20px;
+    border-radius:15px;
+    text-decoration:none;
+    color:white;
+    font-weight:600;
+    transition:0.3s;
+    position:relative;
+    overflow:hidden;
+}
 
-        h1 {
-            font-size: 30px;
-            font-weight: 700;
-            margin-bottom: 8px;
-            letter-spacing: 0.5px;
-        }
+.btn i{
+    font-size:22px;
+}
 
-        .tagline {
-            font-size: 15px;
-            color: #dddddd;
-            margin-bottom: 32px;
-            letter-spacing: 0.3px;
-        }
+/* hover shine effect */
+.btn::before{
+    content:"";
+    position:absolute;
+    width:100%;
+    height:100%;
+    left:-100%;
+    top:0;
+    background:linear-gradient(120deg,transparent,rgba(255,255,255,0.2),transparent);
+    transition:0.5s;
+}
 
-        .links-container {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-        }
+.btn:hover::before{
+    left:100%;
+}
 
-        .link-btn {
-            display: flex;
-            align-items: center;
-            padding: 16px 24px;
-            text-decoration: none;
-            color: white;
-            font-weight: 600;
-            font-size: 15px;
-            border-radius: 18px;
+.btn:hover{
+    transform:translateY(-5px);
+}
 
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            transition: all 0.35s ease;
-        }
+/* COLORS */
+.facebook{background:#1877f2;}
+.instagram{
+    background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);
+}
+.tiktok{
+    background:linear-gradient(45deg,#000,#111,#222);
+}
 
-        .link-btn i {
-            width: 32px;
-            font-size: 22px;
-            margin-left: 14px;
-        }
-
-        .link-btn:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 14px 24px rgba(0, 0, 0, 0.28);
-            filter: brightness(1.08);
-        }
-
-        /* Social Media Colors */
-
-        .facebook {
-            background: #1877f2;
-        }
-
-        .instagram {
-            background: linear-gradient(
-                45deg,
-                #f09433,
-                #e6683c,
-                #dc2743,
-                #cc2366,
-                #bc1888
-            );
-        }
-
-        .tiktok {
-            background: linear-gradient(
-                45deg,
-                #000000,
-                #111111,
-                #1a1a1a
-            );
-        }
-    </style>
+/* ANIMATION */
+@keyframes fadeIn{
+    from{opacity:0; transform:translateY(20px);}
+    to{opacity:1; transform:translateY(0);}
+}
+</style>
 </head>
+
 <body>
 
-    <div class="card">
+<div class="card">
 
-        <!-- Logo -->
-        <div class="logo-container">
-            <img src="logo.jpg" alt="Hediea Store Logo">
-        </div>
+    <div class="logo">
+        <img src="logo.jpg" alt="logo">
+    </div>
 
-        <!-- Store Name -->
-        <h1>Hediea Store</h1>
-        <p class="tagline">Accessories & Gifts 🎁✨</p>
+    <h1>Hediea Store</h1>
+    <p class="tagline">Accessories & Gifts 🎁✨</p>
 
-        <!-- Social Links -->
-        <div class="links-container">
+    <div class="links">
 
-            <!-- Facebook -->
-            <a href="https://www.facebook.com/profile.php?id=61564464971132"
-               target="_blank"
-               class="link-btn facebook">
-                <i class="fab fa-facebook-f"></i>
-                Facebook
-            </a>
+        <a class="btn facebook" href="https://www.facebook.com/profile.php?id=61564464971132" target="_blank">
+            <span>Facebook</span>
+            <i class="fab fa-facebook-f"></i>
+        </a>
 
-            <!-- Instagram -->
-            <a href="https://www.instagram.com/hediea_store_/"
-               target="_blank"
-               class="link-btn instagram">
-                <i class="fab fa-instagram"></i>
-                Instagram
-            </a>
+        <a class="btn instagram" href="https://www.instagram.com/hediea_store_/" target="_blank">
+            <span>Instagram</span>
+            <i class="fab fa-instagram"></i>
+        </a>
 
-            <!-- TikTok -->
-            <a href="https://www.tiktok.com/@hediea_store?_r=1&_t=ZS-95o4cs0sgHn"
-               target="_blank"
-               class="link-btn tiktok">
-                <i class="fab fa-tiktok"></i>
-                TikTok
-            </a>
-
-        </div>
+        <a class="btn tiktok" href="https://www.tiktok.com/@hediea_store?_r=1&_t=ZS-95o4cs0sgHn" target="_blank">
+            <span>TikTok</span>
+            <i class="fab fa-tiktok"></i>
+        </a>
 
     </div>
+
+</div>
 
 </body>
 </html>
